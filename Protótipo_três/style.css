@@ -14,29 +14,11 @@ html{
     scroll-behavior: smooth;
 }
 
-/* RESPONSIVIDADE TABLET */
-
-@media only screen and (min-width: 600px) {
-    /* For tablets: */
-.col-s-1 {width: 8.33%;}
-.col-s-2 {width: 16.66%;}
-.col-s-3 {width: 25%;}
-.col-s-4 {width: 33.33%;}
-.col-s-5 {width: 41.66%;}
-.col-s-6 {width: 50%;}
-.col-s-7 {width: 58.33%;}
-.col-s-8 {width: 66.66%;}
-.col-s-9 {width: 75%;}
-.col-s-10 {width: 83.33%;}
-.col-s-11 {width: 91.66%;}
-.col-s-12 {width: 100%;}
-  }
-
 /* FUNDO-HOME */
 .fundo-home{
 width: 100%;
 height: 100vh;
-background-image: linear-gradient(rgba(0, 0, 0, 0.415),rgba(0, 0, 0, 0.415)),url(img/213248.jpg);
+background-image: linear-gradient(rgba(0, 0, 0, 0.415),rgba(0, 0, 0, 0.500)),url(img/213248.jpg);
 background-size: cover;
 background-position: center;
 }
@@ -93,7 +75,7 @@ width: 100%;
 }
 
 /* CONTEÚDO-HOME */
-.conteudo{
+.conteudohome{
 width: 100%;
 position: absolute;
 top: 55%;
@@ -121,9 +103,85 @@ margin: 20px 10px;
 border-radius:  25px;
 font-weight: bold;
 border: 2px solid #0000ff;
-background: transparent;
+background: #0000ff;
 color: #fff;
+cursor: pointer;
+transition: .4s;
+}
+
+button:hover{
+background: transparent;
+border: 2px solid #0000ff;
 cursor: pointer;
 }
 
-/* FOOTER */
+
+/* SOBRE-NÓS */
+
+.sobre{
+width: 100% ;
+padding: 78px 0px;
+background-color: #d1caca;
+}
+
+.sobre img{
+    height: auto;
+    width: 420px;
+}
+
+.sobretexto{
+width: 550px;
+}
+
+.conteudosobre{
+    width: 1130px;
+    max-width: 95%;
+    margin: 0 auto;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+}
+
+.sobretexto h1{
+    color: white;
+    font-size: 80px;
+    text-transform: capitalize;
+    margin-bottom: 20px;
+}
+
+.sobretexto h5{
+    color: white;
+    font-size: 25px;
+    text-transform: capitalize;
+    margin-bottom: 25px;
+    letter-spacing: 2px;
+}
+
+.sobretexto span{
+    color: #0000ff;   
+}
+
+.sobretexto p{
+color: black;
+letter-spacing: 1px;
+line-height: 28px;
+font-size: 18px;
+margin-bottom: 45px;
+}
+
+.sobretexto button{
+    background: #0000ff;
+    color: white;
+    text-decoration: none;
+    border: 2px solid transparent;
+    font-weight: bold;
+    padding: 13px 30px;
+    border-radius: 30px;
+    transition: .4s;
+}
+
+.sobretexto button:hover{
+    background: transparent;
+    border: 2px solid #0000ff;
+    cursor: pointer;
+}
