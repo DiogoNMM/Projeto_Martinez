@@ -102,15 +102,15 @@ text-align: center;
 margin: 20px 10px;
 border-radius:  25px;
 font-weight: bold;
-border: 2px solid #0000ff;
-background: #0000ff;
+border: 2px solid #0000ff2d;
+background: #0000ff2d;
 color: #fff;
 cursor: pointer;
 transition: .4s;
 }
 
 button:hover{
-background: transparent;
+background: #0000ff;
 border: 2px solid #0000ff;
 cursor: pointer;
 }
@@ -125,8 +125,9 @@ background-color: #d1caca;
 }
 
 .sobre img{
-    height: auto;
-    width: 420px;
+height: auto;
+width: 420px;
+border-radius: 5px;
 }
 
 .sobretexto{
@@ -134,31 +135,31 @@ width: 550px;
 }
 
 .conteudosobre{
-    width: 1130px;
-    max-width: 95%;
-    margin: 0 auto;
-    display: flex;
-    align-items: center;
-    justify-content: space-around;
+width: 1130px;
+max-width: 95%;
+margin: 0 auto;
+display: flex;
+align-items: center;
+justify-content: space-around;
 }
 
 .sobretexto h1{
-    color: white;
-    font-size: 80px;
-    text-transform: capitalize;
-    margin-bottom: 20px;
+color: white;
+font-size: 80px;
+text-transform: capitalize;
+margin-bottom: 20px;
 }
 
 .sobretexto h5{
-    color: white;
-    font-size: 25px;
-    text-transform: capitalize;
-    margin-bottom: 25px;
-    letter-spacing: 2px;
+color: white;
+font-size: 25px;
+text-transform: capitalize;
+margin-bottom: 25px;
+letter-spacing: 2px;
 }
 
 .sobretexto span{
-    color: #0000ff;   
+color: #0000ff;   
 }
 
 .sobretexto p{
@@ -170,18 +171,18 @@ margin-bottom: 45px;
 }
 
 .sobretexto button{
-    background: #0000ff;
-    color: white;
-    text-decoration: none;
-    border: 2px solid transparent;
-    font-weight: bold;
-    padding: 13px 30px;
-    border-radius: 30px;
-    transition: .4s;
+background: #0000ff2d;
+color: white;
+text-decoration: none;
+border: 2px solid transparent;
+font-weight: bold;
+padding: 13px 30px;
+border-radius: 30px;
+transition: .4s;
 }
 
 .sobretexto button:hover{
-    background: transparent;
-    border: 2px solid #0000ff;
-    cursor: pointer;
+background: #0000ff;
+border: 2px solid #0000ff;
+cursor: pointer;
 }
