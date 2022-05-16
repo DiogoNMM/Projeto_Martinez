@@ -3,6 +3,7 @@
 margin: 0;
 padding: 0;
 font-family: 'Poppins';
+box-sizing: border-box;
 }
 
 a{
@@ -120,9 +121,9 @@ cursor: pointer;
 
 .sobre{
 width: 100% ;
-padding: 78px 0px;
-background-color: #d1caca;
-height: 70vh;
+padding: 215px 0px;
+background-color: #96a6ae;
+height: 100vh;
 }
 
 .sobre img{
@@ -136,7 +137,7 @@ width: 550px;
 }
 
 .conteudosobre{
-width: 1130px;
+width: 100vw;
 max-width: 95%;
 margin: 0 auto;
 display: flex;
@@ -185,5 +186,104 @@ transition: .4s;
 .sobretexto button:hover{
 background: #0000ff;
 border: 2px solid #0000ff;
+cursor: pointer;
+}
+
+/* CARDÁPIO */
+
+.menu{
+display: grid;
+
+}
+
+.menu h1{
+grid-column: 1/-1;
+text-align: center; 
+}
+
+.titulo{
+background-color: #EEAD2D;
+color: #fff;
+margin-bottom: 30px;
+padding: 30px 0;
+grid-column: 1/-1;
+text-align: center;
+}
+
+.titulo h1{
+font-weight: 400;
+font-size: 30px;
+letter-spacing: 10px;
+margin-bottom: 10px;
+}
+
+.titulo h3{
+font-weight: 600;
+font-size: 22px;
+letter-spacing: 5px;
+}
+
+.comidas{
+display: flex;
+flex-direction: column;
+position: relative;
+grid-template-rows: 1fr;
+border-radius: 15px;
+box-shadow: 0 0 15px rgba(0,0,0,0.1);
+height: 58vh;
+}
+
+.comidas img{
+position: relative;
+border-radius: 15px;
+height: auto;
+width: 420px;
+border-radius: 5px;
+}
+
+.descricao{
+padding: 20px 10px;
+display: grid;
+grid-template-rows: 1fr 50px;
+grid-row-gap: 15px;
+}
+
+.receita{
+display: grid;
+grid-template-columns: auto auto;
+}
+
+.receita h5{
+font-weight: 600;
+font-size: 18px;
+}
+
+.preco{
+text-align: right;
+}
+
+.descricao p{
+color: #6f6f6f ;
+font-size: 15px;
+line-height: 28px;
+font-weight: 400;
+align-self: stretch;
+}
+
+.descricao button{
+background-color: #eeae2d8b;
+border: none;
+color: #fff;
+font-size: 16px;
+font-weight: 600;
+border-radius: 5px;
+width: 180px;
+cursor: pointer;
+transition: .4s;
+}
+
+.descricao button:hover{
+background: #EEAD2D;
+border: 2px solid #EEAD2D;
 cursor: pointer;
 }
