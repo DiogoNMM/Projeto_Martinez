@@ -282,3 +282,136 @@ font-style: italic;
 
 /* LOGIN */
 
+.fundologin{
+background-color: black;
+}
+
+.main-login {
+height: 90vh;
+display: flex;
+justify-content: space-evenly;
+align-items: center;
+background-color: #2a76c2;
+}
+
+.login-esquerda {
+width: 40vw;
+height: 100vh;
+display: flex;
+justify-content: center;
+align-items: center;
+flex-direction: column;
+margin-left: 170px;
+}
+
+
+
+.login-esquerda h2 {
+font-size: 20pt;
+}
+
+.login-esquerda h2 span {
+font-size: 25pt;
+color: #06a85d;
+}
+
+.imagem-esquerda {
+width: 35vw;
+}
+
+.login-direita {
+width: 50vw;
+height: 100vh;
+display: flex;
+justify-content: center;
+align-items: center;
+}
+
+.card-login {
+width: 60%;
+height: 70%;
+display: flex;
+justify-content: center;
+align-items: center;
+flex-direction: column;
+padding: 10px 15px;
+background-color: #12111a;
+border-radius: 20px;
+box-shadow: 0px 10px 40px #00000056;
+border-top: 1px black solid;
+border-bottom: 1px solid black;
+border-left: 1px black solid;
+border-right: 1px black solid;
+}
+
+.top {
+margin-top: 12%;
+}
+
+.card-login h1 {
+font-weight: 800;
+margin: 0;
+font-size: 30px;
+text-transform: uppercase;
+color: #06a85d;
+}
+
+.textfield {
+display: flex;
+flex-direction: column;
+align-items: flex-start;
+justify-content: center;
+margin: 10px 0px;
+width: 100%;
+}
+
+.textfield>label {
+color: #f0ffffde;
+font-weight: bold;
+margin-bottom: 10px;
+}
+
+.textfield>input {
+width: 100%;
+border: none;
+border-radius: 10px;
+padding: 15px;
+background-color: #2f3e46;
+color: white;
+font-size: 12pt;
+box-shadow: px 5px 5px black;
+box-sizing: border-box;
+border-bottom: 2px solid black;
+}
+
+::placeholder {
+color: #000;
+opacity: 0.5;
+}
+
+
+.textfield>input::placeholder {
+color: white;
+}
+
+.btn-login {
+width: 100%;
+padding: 16px 0px;
+margin: 25px;
+border: none;
+border-radius: 8px;
+outline: none;
+text-transform: uppercase;
+font-weight: 800;
+letter-spacing: 1px;
+color: white;
+background-color: #06a85d;
+box-shadow: 5px 5px 5px black;
+cursor: pointer;
+}
+
+.card-login .goCadastro {
+color: #f0ffffde;
+text-decoration: none;
+font-weight: bold;
+}
