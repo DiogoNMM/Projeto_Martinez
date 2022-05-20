@@ -16,7 +16,7 @@ html{
 }
 
 .fundotudo{
-    background-color: antiquewhite;
+    background-color: #e8f1f2;
 }
 
 /* FUNDO-HOME */
@@ -40,7 +40,6 @@ background-position: center;
 .nav-bar{
 width: 85%;
 margin: auto;
-padding: 35px 0;
 display: flex;
 align-items: center;
 justify-content: space-between;
@@ -68,7 +67,7 @@ text-transform: uppercase;
 content: '';
 height: 3px;
 width: 0%;
-background: #0000ff;
+background: #1b98e0;
 position: absolute;
 left: 0;
 bottom: -10px;
@@ -107,16 +106,16 @@ text-align: center;
 margin: 20px 10px;
 border-radius:  25px;
 font-weight: bold;
-border: 2px solid #0000ff2d;
-background: #0000ff2d;
+border: 2px solid #1b98e082;
+background: #1b98e082;
 color: #fff;
 cursor: pointer;
 transition: .4s;
 }
 
 button:hover{
-background: #0000ff;
-border: 2px solid #0000ff;
+background: #1b98e0;
+border: 2px solid #1b98e0;
 cursor: pointer;
 }
 
@@ -166,7 +165,7 @@ letter-spacing: 2px;
 }
 
 .sobretexto span{
-color: #0000ff;   
+color: #1b98e0;   
 }
 
 .sobretexto p{
@@ -178,7 +177,7 @@ margin-bottom: 45px;
 }
 
 .sobretexto button{
-background: #0000ff2d;
+background: #1b98e082;
 color: white;
 text-decoration: none;
 border: 2px solid transparent;
@@ -189,8 +188,8 @@ transition: .4s;
 }
 
 .sobretexto button:hover{
-background: #0000ff;
-border: 2px solid #0000ff;
+background: #1b98e0;
+border: 2px solid #1b98e0;
 cursor: pointer;
 }
 
@@ -227,7 +226,7 @@ position: absolute;
 content: "";
 width: 100px;
 height: 2px;
-background-color: #0000ff;
+background-color: #1b98e0;
 bottom: 0;
 left: 50%;
 transform: translateX(-50%);
@@ -276,142 +275,6 @@ padding-bottom: 5px;
 
 .comida h4 span{
 float: right;
-color: #ff7720;
+color: #1b98e0;
 font-style: italic;
-}
-
-/* LOGIN */
-
-.fundologin{
-background-color: black;
-}
-
-.main-login {
-height: 90vh;
-display: flex;
-justify-content: space-evenly;
-align-items: center;
-background-color: #2a76c2;
-}
-
-.login-esquerda {
-width: 40vw;
-height: 100vh;
-display: flex;
-justify-content: center;
-align-items: center;
-flex-direction: column;
-margin-left: 170px;
-}
-
-
-
-.login-esquerda h2 {
-font-size: 20pt;
-}
-
-.login-esquerda h2 span {
-font-size: 25pt;
-color: #06a85d;
-}
-
-.imagem-esquerda {
-width: 35vw;
-}
-
-.login-direita {
-width: 50vw;
-height: 100vh;
-display: flex;
-justify-content: center;
-align-items: center;
-}
-
-.card-login {
-width: 60%;
-height: 70%;
-display: flex;
-justify-content: center;
-align-items: center;
-flex-direction: column;
-padding: 10px 15px;
-background-color: #12111a;
-border-radius: 20px;
-box-shadow: 0px 10px 40px #00000056;
-border-top: 1px black solid;
-border-bottom: 1px solid black;
-border-left: 1px black solid;
-border-right: 1px black solid;
-}
-
-.top {
-margin-top: 12%;
-}
-
-.card-login h1 {
-font-weight: 800;
-margin: 0;
-font-size: 30px;
-text-transform: uppercase;
-color: #06a85d;
-}
-
-.textfield {
-display: flex;
-flex-direction: column;
-align-items: flex-start;
-justify-content: center;
-margin: 10px 0px;
-width: 100%;
-}
-
-.textfield>label {
-color: #f0ffffde;
-font-weight: bold;
-margin-bottom: 10px;
-}
-
-.textfield>input {
-width: 100%;
-border: none;
-border-radius: 10px;
-padding: 15px;
-background-color: #2f3e46;
-color: white;
-font-size: 12pt;
-box-shadow: px 5px 5px black;
-box-sizing: border-box;
-border-bottom: 2px solid black;
-}
-
-::placeholder {
-color: #000;
-opacity: 0.5;
-}
-
-
-.textfield>input::placeholder {
-color: white;
-}
-
-.btn-login {
-width: 100%;
-padding: 16px 0px;
-margin: 25px;
-border: none;
-border-radius: 8px;
-outline: none;
-text-transform: uppercase;
-font-weight: 800;
-letter-spacing: 1px;
-color: white;
-background-color: #06a85d;
-box-shadow: 5px 5px 5px black;
-cursor: pointer;
-}
-
-.card-login .goCadastro {
-color: #f0ffffde;
-text-decoration: none;
-font-weight: bold;
 }

@@ -6,9 +6,9 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="style.css">
-    <link rel="stylesheet" href="css/login.css">
+    <link rel="stylesheet" href="css/cadastro.css">
     <link rel="icon" href="img/MartinezFamily__1_-removebg-preview.png">
-    <title>Login</title>
+    <title>Cadastro</title>
 </head>
 <body>
 <div class="fundologin">
@@ -25,25 +25,43 @@
     </div>
 </div>
 
-<div class="main-login">
-    <div class="login-esquerda">
-      <h2 class="top">
-        Olá,<br />
-        <span>Seja bem-vindo de volta</span>
+<div class="main-cadastro">
+    <div class="cadastro-esquerda">
+      <h2>
+        Faça seu cadastro<br />
+        <span>é simples e rápido</span>
       </h2>
-      <img src="gifs/chef-animate (1).svg" width="80%" height="80%" alt="">
+      <img src="gifs/waiters-animate.svg" width="80%" height="80%" alt="" />
     </div>
 
-    <div class="login-direita">
-      <div class="card-login">
-        <h1>Login</h1>
+    <div class="cadastro-direita">
+      <div class="card-cadastro">
+        <h1>Cadastro</h1>
         <div class="textfield">
-          <label for="usuario">Usuário</label>
+          <label for="nome">Nome</label>
           <input
             type="text"
-            name="usuario"
-            placeholder="Digite aqui o seu usuário"
+            name="nome"
+            placeholder="Digite aqui o seu nome"
+            id="iptNome"
+          />
+        </div>
+        <div class="textfield">
+          <label for="email">Email</label>
+          <input
+            type="text"
+            name="email"
+            placeholder="Digite aqui o seu email"
             id="iptEmail"
+          />
+        </div>
+        <div class="textfield">
+          <label for="tel">Telefone</label>
+          <input
+            type="text"
+            name="tel"
+            placeholder="Coloque seu telefone"
+            id="iptTelefone"
           />
         </div>
         <div class="textfield">
@@ -55,21 +73,28 @@
             id="iptSenha"
           />
         </div>
-        <button class="btn-login" onclick="entrar()">Login</button>
-        <a href="Cadastro.html" class="goCadastro"
-          >Não possuí cadastro? Venha se cadastrar</a
-        >
+        <div class="textfield">
+          <label for="senha">Confirmação de senha</label>
+          <input
+            type="password"
+            name="senha"
+            placeholder="Digite novamente a sua senha"
+            id="iptSenha2"
+          />
+        </div>
+        <button class="btn-cadastro" onclick="cadastrar()">
+          Cadastrar
+        </button>
         <div id="div_aguardar" class="loading-div" style="display: none">
           Carregando
         </div>
-        <div class="card_erro" id="cardErro">
+        <div class="card_erro" id="cardErro" style="color: #fff">
           <span id="mensagem_erro"></span>
         </div>
         <div id="div_erros_login"></div>
       </div>
     </div>
-</div>
-
-
+  </div>
+    
 </body>
 </html>
