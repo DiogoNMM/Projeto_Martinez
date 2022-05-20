@@ -113,7 +113,7 @@ color: black;
 
 .card-login .btn-login {
 width: 100%;
-padding: 16px 0px;
+padding: 10px 0px;
 margin: 25px;
 border: none;
 border-radius: 8px;
@@ -130,7 +130,7 @@ transition: .4s;
 
 .card-login .btn-login:hover{
 background: #1b98e0;
-border: 2px solid #1b98e0;
+border: 1px solid #1b98e0;
 cursor: pointer;
 }
 
