@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Cadastro</title>
+
+
+    <script src="./js/funcoes.js"></script>
+
+
+    <link rel="icon" href="css/img/MartinezFamily__1_-removebg-preview.png">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/cadastro.css">
+    <link href='https://fonts.googleapis.com/css?family=Poppins' rel='stylesheet'>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Exo+2:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
+        rel="stylesheet">
+</head>
+
+<body>
+
+    <div class="fundologin">
+        <div class="nav-bar">
+            <img src="css/img/MartinezFamily__2_-removebg-preview.png" class="logo">
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="index.html">Sobre nós</a></li>
+                <li><a href="index.html">Cardápio</a></li>
+                <li><a href="index.html">Contato</a></li>
+                <li><a href="login.html">Login</a></li>
+                <li><a href="Cadastro.html">Cadastro</a></li>
+            </ul>
+        </div>
+    </div>
+    
+    <div class="main-cadastro">
+        <div class="cadastro-esquerda">
+          <h2>
+            Faça seu cadastro<br />
+            <span>é simples e rápido</span>
+          </h2>
+          <img src="css/img/waiters-animate.svg" width="80%" height="80%" alt="" />
+        </div>
+    
+        <div class="cadastro-direita">
+            <div class="card-cadastro">
+              <h1>Cadastro</h1>
+              <div class="textfield">
+                <label for="nome">Nome</label>
+                <input
+                  type="text"
+                  name="nome"
+                  placeholder="Digite aqui o seu nome"
+                  id="iptNome"
+                />
+              </div>
+              <div class="textfield">
+                <label for="email">Email</label>
+                <input
+                  type="text"
+                  name="email"
+                  placeholder="Digite aqui o seu email"
+                  id="iptEmail"
+                />
+              </div>
+              <div class="textfield">
+                <label for="tel">Telefone</label>
+                <input
+                  type="text"
+                  name="tel"
+                  placeholder="Coloque seu telefone"
+                  id="iptTelefone"
+                />
+              </div>
+              <div class="textfield">
+                <label for="senha">Senha</label>
+                <input
+                  type="password"
+                  name="senha"
+                  placeholder="Digite aqui a sua senha"
+                  id="iptSenha"
+                />
+              </div>
+              <div class="textfield">
+                <label for="senha">Confirmação de senha</label>
+                <input
+                  type="password"
+                  name="senha"
+                  placeholder="Digite novamente a sua senha"
+                  id="iptSenha2"
+                />
+              </div>
+              <button class="btn-cadastro" onclick="cadastrar()">
+                Cadastrar
+              </button>
+              <div id="div_aguardar" class="loading-div" style="display: none">
+                Carregando
+              </div>
+              <div class="card_erro" id="cardErro" style="color: #fff">
+                <span id="mensagem_erro"></span>
+              </div>
+              <div id="div_erros_login"></div>
+            </div>
+          </div>
+        </div>
+
+</body>
+
+</html>
+
+<script>
+    function cadastrar() {
+        aguardar();
+
+        //Recupere o valor da nova input pelo nome do id
+        // Agora vá para o método fetch logo abaixo
+        var nomeVar = iptNome.value;
+        var emailVar = iptEmail.value;
+        var telVar = iptTelefone.value;
+        var senhaVar = iptSenha.value;
+        var confirmacaoSenhaVar = iptSenha2.value;
+
+        if (nomeVar == "" || emailVar == "" || telVar == "" || senhaVar == "" || confirmacaoSenhaVar == "") {
+            cardErro.style.display = "block"
+            mensagem_erro.innerHTML = "(Mensagem de erro para todos os campos em branco)";
+
+            finalizarAguardar();
+            return false;
+        }
+        else {
+            setInterval(sumirMensagem, 5000)
+        }
+
+        // Enviando o valor da nova input
+        fetch("/usuarios/cadastrar", {
+            method: "POST",
+            headers: {
+                "Content-Type": "application/json"
+            },
+            body: JSON.stringify({
+                // crie um atributo que recebe o valor recuperado aqui
+                // Agora vá para o arquivo routes/usuario.js
+                nomeServer: nomeVar,
+                emailServer: emailVar,
+                telServer: telVar,
+                senhaServer: senhaVar
+            })
+        }).then(function (resposta) {
+
+            console.log("resposta: ", resposta);
+
+            if (resposta.ok) {
+                cardErro.style.display = "block";
+
+                mensagem_erro.innerHTML = "Cadastro realizado com sucesso! Redirecionando para tela de Login...";
+
+                setTimeout(() => {
+                    window.location = "login.html";
+                }, "2000")
+                
+                limparFormulario();
+                finalizarAguardar();
+            } else {
+                throw ("Houve um erro ao tentar realizar o cadastro!");
+            }
+        }).catch(function (resposta) {
+            console.log(`#ERRO: ${resposta}`);
+            finalizarAguardar();
+        });
+
+        return false;
+    }
+
+    function sumirMensagem() {
+        cardErro.style.display = "none"
+    }
+
+</script>
