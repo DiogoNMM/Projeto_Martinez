@@ -1,6 +1,6 @@
 
 .fundologin{
-background-color: #000000;
+background-color: #000000ba;
 }
 
 .main-login {
@@ -130,7 +130,6 @@ transition: .4s;
 
 .card-login .btn-login:hover{
 background: #1b98e0;
-border: 1px solid #1b98e0;
 cursor: pointer;
 }
 
