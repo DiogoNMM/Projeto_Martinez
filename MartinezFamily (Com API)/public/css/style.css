@@ -278,3 +278,260 @@ float: right;
 color: #1b98e0;
 font-style: italic;
 }
+
+/* CONTATO */
+
+.contato{
+position: relative;
+min-height: 100vh;
+padding: 50px 100px;
+display: flex;
+justify-content: center;
+align-items: center ;
+flex-direction: column;
+/* background: url(img/pexels-vinícius-pimenta-311620.jpg);
+background-size: cover; */
+background: #247ba0ba;
+}
+
+.contato .conteudo-contato{
+max-width: 800px;
+text-align: center;
+}
+
+.contato .conteudo-contato h2{
+font-size: 36px;
+font-style: 500;
+color: #fff;
+}
+
+.contato .conteudo-contato p{
+font-weight: 300;
+font-size: 18px;
+color: #fff;
+}
+
+.container{
+width: 100%;
+display: flex;
+justify-content: center;
+align-items: center;
+margin-top: 30px; 
+}
+
+.container .contatoinfo{
+width: 50%;
+display: flex;
+flex-direction: column;
+}
+
+.container .contatoinfo .card{
+position: relative;
+padding: 20px 0;
+display: flex;
+}
+
+.container .contatoinfo .card .icon{
+min-width: 50px;
+height: 50px;
+background: #fff;
+display: flex;
+justify-content: center;
+align-items: center;
+border-radius: 50%;
+font-size: 22px;
+}
+
+.container .contatoinfo .card .texto{
+display: flex;
+margin-left: 20px;
+font-size: 16px;
+color: #fff;
+flex-direction: column;
+font-weight: 300;
+}
+
+.container .contatoinfo .card .texto h3{
+font-weight: 500;
+font-size: 20px;
+color: #02b3cb;
+}
+
+.contatocard{
+width: 40%;
+padding: 40px;
+background: #fff;
+border-radius: 10px;
+}
+
+.contatocard h2{
+font-size: 30px;
+color: #333;
+font-weight: 500;
+}
+
+.contatocard .inputbox{
+position: relative;
+width: 100%;
+margin-top: 10px;
+}
+
+.contatocard .inputbox input , 
+.contatocard .inputbox textarea { 
+width: 100%;
+padding: 5px 0;
+font-size: 16px;
+margin: 10px 0;
+border: none;
+border-bottom: 2px solid #333;
+outline: none;
+resize: none;
+}
+
+.contatocard .inputbox span{
+position: absolute;
+left: 0;
+padding: 5px 0;
+font-size: 16px;
+margin: 10px 0;
+pointer-events: none;
+transition: 0.5s;
+color: #666;
+}
+
+.contatocard .inputbox input:focus ~ span,
+.contatocard .inputbox input:valid ~ span,
+.contatocard .inputbox textarea:focus ~ span,
+.contatocard .inputbox textarea:valid ~ span{
+color: #e91e63;
+font-size: 12px;
+transform: translateY(-20px);
+}
+.contatocard .inputbox input[type="submit"]{
+width: 100px;
+background: #00bcd4;
+color: #fff;
+border: none;
+cursor: pointer;
+padding: 10px;
+font-size: 18px;
+}
+
+/* FOOTER */
+
+footer{
+position: relative;
+width: 100%;
+background: #3586ff;
+min-height: 100px;
+padding: 20px 50px;
+display: flex;
+justify-content: center;
+align-items: center;
+flex-wrap: wrap;
+flex-direction: column;
+}
+
+footer .redes-sociais , 
+footer .menu-footer{
+position: relative;
+display: flex;
+justify-content: center;
+align-items: center;
+margin: 10px 0;
+}
+
+footer .redes-sociais li,
+footer .menu-footer li{
+list-style: none;
+}
+
+footer .redes-sociais li a{
+font-size: 2em;
+color: #fff;
+margin: 0 10px;
+display: inline-block;
+transition: 0.5s;
+}
+
+footer .redes-sociais li a:hover{
+transform: translateY(-10px);
+}
+
+footer .menu-footer li a{
+font-size: 1.2em;
+color: #fff;
+margin: 0 10px;
+display: inline-block;
+transition: 0.5s;
+text-decoration: none;
+opacity: 0.75;
+}
+
+footer .menu-footer li a:hover{
+opacity: 1;
+}
+
+footer p{
+color: #fff;
+text-align: center;
+margin-top: 15px;
+margin-bottom: 10px;
+font-size: 1.1em;
+}
+
+footer .onda{
+position: absolute;
+top: -100px;
+left: 0;
+width: 100%;
+height: 100px;
+background: url(img/wave.png);
+background-size: 1000px 100px;
+}
+
+footer .onda#onda1{
+z-index: 1000;
+opacity: 1;
+bottom: 0;
+animation: animateOnda 4s linear infinite;
+}
+
+footer .onda#onda2{
+z-index: 999;
+opacity: 0.5;
+bottom: 0;
+animation: animateOnda_02 4s linear infinite;
+}
+
+footer .onda#onda3{
+z-index: 1000;
+opacity: 0.2;
+bottom: 15px;
+animation: animateOnda 3s linear infinite;
+}
+
+footer .onda#onda4{
+z-index: 999;
+opacity: 0.7;
+bottom: 20px;
+animation: animateOnda_02 3s linear infinite;
+}
+
+
+
+@keyframes animateOnda{
+    0%{
+        background-position-x: 100px;
+    }100%{
+        background-position-x: 0px;
+    }
+}
+
+@keyframes animateOnda_02{
+    0%{
+        background-position-x: 0px;
+    }100%{
+        background-position-x: 1000px;
+    }
+}
