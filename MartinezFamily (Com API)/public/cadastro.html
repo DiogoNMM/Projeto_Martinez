@@ -68,15 +68,6 @@
                 />
               </div>
               <div class="textfield">
-                <label for="tel">Telefone</label>
-                <input
-                  type="text"
-                  name="tel"
-                  placeholder="Coloque seu telefone"
-                  id="iptTelefone"
-                />
-              </div>
-              <div class="textfield">
                 <label for="senha">Senha</label>
                 <input
                   type="password"
@@ -93,6 +84,17 @@
                   placeholder="Digite novamente a sua senha"
                   id="iptSenha2"
                 />
+              </div>
+              <div>
+                <label for="prato"><b>Escolha um prato</b></label>
+                <select name="" id="">
+                  <option value="">Feijoada</option>
+                  <option value="">Galinhada</option>
+                  <option value="">Caldo De Mocotó</option>
+                  <option value="">Arroz Carreteiro</option>
+                  <option value="">Virado Paulista</option>
+                  <option value="">Baião De Dois</option>
+                </select>
               </div>
               <button class="btn-cadastro" onclick="cadastrar()">
                 Cadastrar
@@ -120,11 +122,10 @@
         // Agora vá para o método fetch logo abaixo
         var nomeVar = iptNome.value;
         var emailVar = iptEmail.value;
-        var telVar = iptTelefone.value;
         var senhaVar = iptSenha.value;
         var confirmacaoSenhaVar = iptSenha2.value;
 
-        if (nomeVar == "" || emailVar == "" || telVar == "" || senhaVar == "" || confirmacaoSenhaVar == "") {
+        if (nomeVar == "" || emailVar == "" || senhaVar == "" || confirmacaoSenhaVar == "") {
             cardErro.style.display = "block"
             mensagem_erro.innerHTML = "(Mensagem de erro para todos os campos em branco)";
 
@@ -146,7 +147,7 @@
                 // Agora vá para o arquivo routes/usuario.js
                 nomeServer: nomeVar,
                 emailServer: emailVar,
-                telServer: telVar,
+
                 senhaServer: senhaVar
             })
         }).then(function (resposta) {
