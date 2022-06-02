@@ -85,25 +85,15 @@
                   id="iptSenha2"
                 />
               </div>
-              <div>
-                <label for="prato"><b>Escolha um prato</b></label>
-                <select name="" id="">
-                  <option value="">Feijoada</option>
-                  <option value="">Galinhada</option>
-                  <option value="">Caldo De Mocotó</option>
-                  <option value="">Arroz Carreteiro</option>
-                  <option value="">Virado Paulista</option>
-                  <option value="">Baião De Dois</option>
-                </select>
-              </div>
+              
               <button class="btn-cadastro" onclick="cadastrar()">
                 Cadastrar
               </button>
               <div id="div_aguardar" class="loading-div" style="display: none">
                 Carregando
               </div>
-              <div class="card_erro" id="cardErro" style="color: #fff">
-                <span id="mensagem_erro"></span>
+              <div class="card_erro" id="cardErro" style="color: rgb(0, 0, 0)">
+                <span id="mensagem_erro" style="color: black;"></span>
               </div>
               <div id="div_erros_login"></div>
             </div>
@@ -124,10 +114,11 @@
         var emailVar = iptEmail.value;
         var senhaVar = iptSenha.value;
         var confirmacaoSenhaVar = iptSenha2.value;
+        
 
-        if (nomeVar == "" || emailVar == "" || senhaVar == "" || confirmacaoSenhaVar == "") {
+        if (nomeVar == "" || emailVar == "" || senhaVar == "" || confirmacaoSenhaVar == "" ) {
             cardErro.style.display = "block"
-            mensagem_erro.innerHTML = "(Mensagem de erro para todos os campos em branco)";
+            mensagem_erro.innerHTML = "Escreva em todos os campos";
 
             finalizarAguardar();
             return false;
