@@ -20,83 +20,67 @@
             <i class='bx bxl-meta'></i>
             <div class="logo_name">MartinezFamily</div>
         </div>
-        <i class='bx bx-menu' id="btn"></i>
-    </div>
+        <i class='bx bx-menu' id="btn" style="cursor: pointer;"></i>
+    </div>  
     <ul class="nav_list">
-        <li>
-            
-                <i class='bx bx-search-alt-2' ></i>
-                <input type="text" placeholder="Procurar...">
-           
+        <!-- <li>  
+            <i class='bx bx-search-alt-2' ></i>
+            <input type="text" placeholder="Procurar...">      
             <span class="tooltip">Procurar</span>
-        </li>
-        <li>
-            <a href="#">
-                <i class='bx bxs-grid-alt'></i>
-                <span class="links_name">Dashboard</span>
-            </a>
-            <span class="tooltip">Dashboard</span>
-        </li>
+        </li> -->
         <li>
             <a href="#">
                 <i class='bx bx-user-circle' ></i>
-                <span class="links_name">user</span>
+                <span class="links_name">Usuário</span>
             </a>
-            <span class="tooltip">user</span>
+            <span class="tooltip">Usuário</span>
         </li>
         <li>
             <a href="#">
                 <i class='bx bxs-chat' ></i>
-                <span class="links_name">messages</span>
+                <span class="links_name">Forum de usuários</span>
             </a>
-            <span class="tooltip">messages</span>
+            <span class="tooltip">Forum</span>
         </li>
         <li>
             <a href="#">
-                <i class='bx bxs-bar-chart-alt-2' ></i>
-                <span class="links_name">Analytics</span>
+                <i class='bx bxs-dice-5'></i>
+                <span class="links_name">Quiz</span>
             </a>
-            <span class="tooltip">Analytics</span>
+            <span class="tooltip">Quiz</span>
         </li>
-        <li>
-            <a href="#">
-                <i class='bx bxs-folder' ></i>
-                <span class="links_name">File manager</span>
-            </a>
-            <span class="tooltip">File manager</span>
-        </li>
-        <li>
+        <!-- <li>
             <a href="#">
                 <i class='bx bx-cart' ></i>
                 <span class="links_name">Order</span>
             </a>
             <span class="tooltip">Order</span>
-        </li>
-        <li>
+        </li> -->
+        <!-- <li>
             <a href="#">
                 <i class='bx bxs-heart' ></i>
                 <span class="links_name">Save</span>
             </a>
             <span class="tooltip">Save</span>
-        </li>
-        <li>
+        </li> -->
+        <!-- <li>
             <a href="#">
                 <i class='bx bx-cog' ></i>
                 <span class="links_name">Settings</span>
             </a>
             <span class="tooltip">Settings</span>
-        </li>
+        </li> -->
     </ul>
     <div class="profile_content">
         <div class="profile">
             <div class="profile_details">
                 <img src="img/99742929.jpg" alt="">
                 <div class="name_job">
-                    <div class="name">Diogo Martinez</div>
+                    <div class="name" id="b_usuario">Diogo Martinez</div>
                     <div class="job">Analista Senior</div>
                 </div>
             </div>
-            <i class='bx bx-log-out' id="log_out" ></i>
+            <i class='bx bx-log-out' id="log_out" onclick="limparSessao()"></i>
         </div>
     </div>
 </div>
@@ -120,6 +104,7 @@ searchBtn.onclick = function(){
 }
 
 
+b_usuario.innerHTML = sessionStorage.NOME_USUARIO;
 </script>
 
 
@@ -138,5 +123,4 @@ searchBtn.onclick = function(){
 
 
 <!-- onclick="limparSessao()"
-b_usuario.innerHTML = sessionStorage.NOME_USUARIO;
 <h3>Olá, <span id="b_usuario">usuário</span>!</h3> -->

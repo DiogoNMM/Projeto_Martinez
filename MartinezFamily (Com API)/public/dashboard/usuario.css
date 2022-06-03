@@ -17,7 +17,7 @@ body{
 .sidebar{
   height: 100%;
   width: 78px;
-  background: #11101d;
+  background: #000000ba;
   top: 0;
   left: 0;
   padding: 6px 14px;
@@ -116,6 +116,7 @@ body{
   opacity: 1;
 }
 
+/* 
 .sidebar ul li input{
   position: absolute;
   height: 100%;
@@ -125,11 +126,11 @@ body{
   border-radius: 12px;
   outline: none;
   border: none;
-  background: #1d1b32;
+  background: #13639193;
   padding-left: 50px;
   font-size: 18px;
   color: #fff;
-}
+} */
 
 .sidebar ul li .bx-search{
   position: absolute;
@@ -194,7 +195,7 @@ width: 100%;
 }
 
 .sidebar.active .profile_content .profile{
-  background: #1d1b32;
+  background: #00000079;
 }
 
 .profile_content .profile .profile_details{
@@ -241,7 +242,8 @@ width: 100%;
   border-radius: 12px;
   text-align: center;
   transition: all 0.5s ease;
-  background: #1d1b32;
+  background: #000000ba;
+  cursor: pointer;
 }
 
 .sidebar.active .profile #log_out{
@@ -249,7 +251,7 @@ width: 100%;
 }
 
 .sidebar.active .profile #log_out{
-  background: #1d1b32;
+  background: #00000079;
 }
 
 
