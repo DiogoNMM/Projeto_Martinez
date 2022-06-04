@@ -15,10 +15,10 @@
 
 <body>
 <div class="sidebar">
-    <div class="logo_content">
+    <div class="logo_conteudo">
         <div class="logo">
             <i class='bx bxl-meta'></i>
-            <div class="logo_name">MartinezFamily</div>
+            <div class="logo_nome">MartinezFamily</div>
         </div>
         <i class='bx bx-menu' id="btn" style="cursor: pointer;"></i>
     </div>  
@@ -26,57 +26,57 @@
         <!-- <li>  
             <i class='bx bx-search-alt-2' ></i>
             <input type="text" placeholder="Procurar...">      
-            <span class="tooltip">Procurar</span>
+            <span class="ferramenta">Procurar</span>
         </li> -->
         <li>
-            <a href="#">
+            <a href="usuario.html">
                 <i class='bx bx-user-circle' ></i>
-                <span class="links_name">Usuário</span>
+                <span class="links_nome">Usuário</span>
             </a>
-            <span class="tooltip">Usuário</span>
+            <span class="ferramenta">Usuário</span>
         </li>
         <li>
             <a href="#">
                 <i class='bx bxs-chat' ></i>
-                <span class="links_name">Forum de usuários</span>
+                <span class="links_nome">Forum de usuários</span>
             </a>
-            <span class="tooltip">Forum</span>
+            <span class="ferramenta">Forum</span>
         </li>
         <li>
-            <a href="#">
-                <i class='bx bxs-dice-5'></i>
-                <span class="links_name">Quiz</span>
+            <a href="votacao.html">
+                <i class='bx bx-poll'></i>
+                <span class="links_nome">Quiz</span>
             </a>
-            <span class="tooltip">Quiz</span>
+            <span class="ferramenta">Quiz</span>
         </li>
         <!-- <li>
             <a href="#">
                 <i class='bx bx-cart' ></i>
-                <span class="links_name">Order</span>
+                <span class="links_nome">Order</span>
             </a>
-            <span class="tooltip">Order</span>
+            <span class="ferramenta">Order</span>
         </li> -->
         <!-- <li>
             <a href="#">
                 <i class='bx bxs-heart' ></i>
-                <span class="links_name">Save</span>
+                <span class="links_nome">Save</span>
             </a>
-            <span class="tooltip">Save</span>
+            <span class="ferramenta">Save</span>
         </li> -->
         <!-- <li>
             <a href="#">
                 <i class='bx bx-cog' ></i>
-                <span class="links_name">Settings</span>
+                <span class="links_nome">Settings</span>
             </a>
-            <span class="tooltip">Settings</span>
+            <span class="ferramenta">Settings</span>
         </li> -->
     </ul>
-    <div class="profile_content">
-        <div class="profile">
-            <div class="profile_details">
+    <div class="perfil_conteudo">
+        <div class="perfil">
+            <div class="perfil_detalhes">
                 <img src="img/99742929.jpg" alt="">
-                <div class="name_job">
-                    <div class="name" id="b_usuario">Diogo Martinez</div>
+                <div class="profissao">
+                    <div class="nome" id="b_usuario">Diogo Martinez</div>
                     <div class="job">Analista Senior</div>
                 </div>
             </div>
@@ -84,9 +84,10 @@
         </div>
     </div>
 </div>
-<div class="home_content">
-    <div class="text">Conteudo</div>
+<div class="home_conteudo">
+    <div class="texto">Conteúdo</div>
 </div>
+
 
 
 
@@ -94,7 +95,7 @@
 <script>
 let btn = document.querySelector("#btn");
 let sidebar = document.querySelector(".sidebar");
-let searchBtn = document.querySelector(".bx-search");
+
 
 btn.onclick = function(){
     sidebar.classList.toggle("active");
