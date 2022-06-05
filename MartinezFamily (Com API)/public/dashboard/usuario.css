@@ -11,6 +11,7 @@ body{
   min-height: 100vh;
   width: 100%;
   overflow: hidden;
+  background: #e8f1f2;
 }
 
 /* SIDE-BAR */
@@ -256,7 +257,7 @@ width: 100%;
 
 
 
-/* CONTEUDO USUARIO */
+/* CONTEUDO Receitas */
 
 .home_conteudo{
   position: absolute;
@@ -280,7 +281,84 @@ width: 100%;
   left: 240px;
 }
 
+.container{
+  display: flex;
+  justify-content: space-between;
+  margin: 0px 12rem;
+  margin-top: 6rem;
+}
+
+.card{
+  display: flex;
+  flex-direction: column;
+  height: 100px;
+  width: 355px;
+  padding: 22px;
+}
+
+.card_img{
+  height: 200px;
+  width: auto;
+}
+
+.card_body{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background: white;
+  color: black;
+  padding: 30px 20px;
+}
+
+.card_body h3{
+  margin-bottom: 10px;
+  letter-spacing: 2px;
+  font-size: 22px;
+}
 
 
-/* CONTEUDO QUIZ */
+.card_body hr{
+  width: 80%;
+  height: 2px;
+  background: gray;
+}
 
+.card_body ul{
+  display: flex;
+  align-items: center;
+}
+
+.card_body ul li{
+  list-style:none ;
+  padding: 18px;
+}
+
+.card_body ul li i{
+  color: gray;
+  font-size: 19px;
+  margin-right: 10px;
+}
+
+.card_body ul li span{
+  color: red;
+  font-weight: 600;
+  font-size: 20px;
+}
+
+.card_body button{
+  background: red;
+  color: wheat;
+  padding: 5px 40px;
+  border: none;
+  margin-top: 15px;
+  font-weight: 600;
+  letter-spacing: 2px;
+  cursor: pointer;
+  transition: 0.3s ease-in-out;
+}
+
+.card_body button:hover{
+  border: 1px solid red;
+  color: red;
+  background: white;
+}
