@@ -262,7 +262,7 @@ width: 100%;
 .home_conteudo{
   position: absolute;
   height: 100%;
-  left: 78px;
+  left: 50px;
   width: calc(100% - 78px);
   transition: all 0.5s ease;
 }
@@ -284,20 +284,25 @@ width: 100%;
 .container{
   display: flex;
   justify-content: space-between;
-  margin: 0px 12rem;
-  margin-top: 6rem;
+  margin: 0px 8rem;
+  margin-top: 1rem;
 }
 
 .card{
   display: flex;
   flex-direction: column;
-  height: 100px;
-  width: 355px;
+  height: 80px;
+  width: 370px;
   padding: 22px;
+  transition: all 0.4s ease;
 }
 
-.card_img{
-  height: 200px;
+.card:hover{
+  transform: scale(0.96);
+}
+
+.card img{
+  height: 173px;
   width: auto;
 }
 
@@ -307,7 +312,7 @@ width: 100%;
   align-items: center;
   background: white;
   color: black;
-  padding: 30px 20px;
+  padding: 20px 50px;
 }
 
 .card_body h3{
@@ -330,23 +335,29 @@ width: 100%;
 
 .card_body ul li{
   list-style:none ;
-  padding: 18px;
+  padding: 8px;
 }
 
 .card_body ul li i{
   color: gray;
-  font-size: 19px;
+  font-size: 10px;
   margin-right: 10px;
 }
 
 .card_body ul li span{
-  color: red;
+  color: #1b98e0;
   font-weight: 600;
   font-size: 20px;
+  text-align: center;
+  align-items: center;
+}
+
+.card_body p{
+  margin-top: 15px;
 }
 
 .card_body button{
-  background: red;
+  background: #1b98e0;
   color: wheat;
   padding: 5px 40px;
   border: none;
@@ -358,7 +369,11 @@ width: 100%;
 }
 
 .card_body button:hover{
-  border: 1px solid red;
-  color: red;
+  border: 1px solid #1b98e0;
+  color: #1b98e0;
   background: white;
+}
+.card_body button a{
+  text-decoration: none;
+  color: wheat;
 }
