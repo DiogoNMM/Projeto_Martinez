@@ -12,7 +12,7 @@
     <link href='https://unpkg.com/boxicons@2.1.2/css/boxicons.min.css' rel='stylesheet'>
     <link href='https://fonts.googleapis.com/css?family=Poppins' rel='stylesheet'>
 </head>
-<body>
+<body onload="validarSessao(), obterdados()">
     <div class="sidebar">
         <div class="logo_conteudo">
             <div class="logo">
@@ -44,9 +44,9 @@
             <li>
                 <a href="votacao.html">
                     <i class='bx bx-poll'></i>
-                    <span class="links_nome">Quiz</span>
+                    <span class="links_nome">Votação</span>
                 </a>
-                <span class="ferramenta">Quiz</span>
+                <span class="ferramenta">Votação</span>
             </li>
             <!-- <li>
                 <a href="#">
@@ -83,6 +83,132 @@
             </div>
         </div>
     </div>
+
+
+    <div class="home_conteudo">
+        <div class="texto"><div class="card">
+            <h1 id="prato1">Nome Prato</h1>
+            <div class="temperatura">
+                <p id="temp_aquario_1">-°C</p>
+            </div>
+            <div class="cor-alerta" id="card_1"></div>
+        </div>
+        <div class="card">
+            <h1>Aquário 1</h1>
+            <div class="temperatura">
+                <p id="temp_aquario_2">-°C</p>  
+            </div>
+            <div class="cor-alerta" id="card_2"></div>
+
+        </div>
+        <div class="card">
+            <h1>Aquário 1</h1>
+            <div class="temperatura">
+                <p id="temp_aquario_3">-°C</p>
+            </div>
+            <div class="cor-alerta ideal" id="card_3"></div>
+        </div>
+    </div></div>
+        
     
 </body>
 </html>
+<script>
+    let btn = document.querySelector("#btn");
+    let sidebar = document.querySelector(".sidebar");
+    
+    
+    btn.onclick = function(){
+        sidebar.classList.toggle("active");
+    }
+    // searchBtn.onclick = function(){
+    //     sidebar.classList.toggle("active");
+    // }
+    
+    
+    b_usuario.innerHTML = sessionStorage.NOME_USUARIO;
+    </script>
+
+    <script>
+        function obterdados(idAquario) {
+        fetch(`/medidas/tempo-real/${idAquario}`)
+            .then(resposta => {
+
+                if (resposta.ok) {
+                    resposta.json().then(resposta => {
+
+                        console.log(`Dados recebidos: ${JSON.stringify(resposta)}`);
+
+                        var dados = {
+                            temperatura: resposta[0].temperatura,
+                            // prato: resposta[1].prato
+                        }
+
+                        alertar(resposta[0].temperatura, idAquario);
+                    });
+                } else {
+
+                    console.error('Nenhum dado encontrado ou erro na API');
+                }
+            })
+            .catch(function (error) {
+                console.error(`Erro na obtenção dos dados do aquario p/ gráfico: ${error.message}`);
+            });
+
+    }
+
+    function alertar(temperatura, idAquario) {
+        var limites = {
+            muito_quente: 23,
+            quente: 22,
+            ideal: 20,
+            frio: 10,
+            muito_frio: 5
+        };
+
+        var classe_temperatura = 'cor-alerta';
+
+        // if (temperatura >= limites.muito_quente) {
+        //     classe_temperatura = 'cor-alerta perigo-quente';
+        //     console.log("caiu no 1")
+        // }
+        // else if (temperatura < limites.muito_quente && temperatura >= limites.quente) {
+        //     classe_temperatura = 'cor-alerta alerta-quente';
+        //     console.log("caiu no 2")
+        // }
+        // else if (temperatura < limites.quente && temperatura > limites.frio) {
+        //     classe_temperatura = 'cor-alerta ideal';
+        //     console.log("caiu no 3")
+        // }
+        // else if (temperatura <= limites.frio && temperatura > limites.muito_frio) {
+        //     classe_temperatura = 'cor-alerta alerta-frio';
+        //     console.log("caiu no 4")
+        // }
+        // else if (temperatura < limites.min_temperatura) {
+        //     classe_temperatura = 'cor-alerta perigo-frio';
+        //     console.log("caiu no 5")
+        // }
+
+        var card;
+
+            // prato1.innerHTML = prato;
+            temp_aquario_1.innerHTML = temperatura;
+            // card = card_1
+         
+        // else if (idAquario == 2) {
+            temp_aquario_2.innerHTML = temperatura;
+        //     card = card_2
+        // } else if (idAquario == 3) {
+        //     temp_aquario_3.innerHTML = temperatura + "°C";
+        //     card = card_3
+        // } else if (idAquario == 4) {
+        //     temp_aquario_4.innerHTML = temperatura + "°C";
+        //     card = card_4
+        // }
+
+       
+
+    }
+
+    </script>
+    

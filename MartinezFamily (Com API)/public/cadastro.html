@@ -85,6 +85,18 @@
                   id="iptSenha2"
                 />
               </div>
+
+              <div class="textfield">
+                <label for="">Escolha seu prato</label>
+                <select name="" id="prato">
+                  <option value="1">Feijoada</option>
+                  <option value="2">Baião de Dois</option>
+                  <option value="3">Galinhada</option>
+                  <option value="4">Caldo De Mocotó</option>
+                  <option value="5">Arroz Carreteiro</option>
+                  <option value="6">Virado Paulista</option>
+                </select>
+              </div>
               
               <button class="btn-cadastro" onclick="cadastrar()">
                 Cadastrar
@@ -114,9 +126,10 @@
         var emailVar = iptEmail.value;
         var senhaVar = iptSenha.value;
         var confirmacaoSenhaVar = iptSenha2.value;
+        var pratoVar = prato.value
         
 
-        if (nomeVar == "" || emailVar == "" || senhaVar == "" || confirmacaoSenhaVar == "" ) {
+        if (nomeVar == "" || emailVar == "" || senhaVar == "" || confirmacaoSenhaVar == "" || pratoVar == "") {
             cardErro.style.display = "block"
             mensagem_erro.innerHTML = "Escreva em todos os campos";
 
@@ -138,8 +151,8 @@
                 // Agora vá para o arquivo routes/usuario.js
                 nomeServer: nomeVar,
                 emailServer: emailVar,
-
-                senhaServer: senhaVar
+                senhaServer: senhaVar,
+                pratoServer: pratoVar
             })
         }).then(function (resposta) {
 

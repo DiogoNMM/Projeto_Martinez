@@ -281,6 +281,8 @@ width: 100%;
   left: 240px;
 }
 
+/* RECEITAS */
+
 .container{
   display: flex;
   justify-content: space-between;
@@ -377,3 +379,6 @@ width: 100%;
   text-decoration: none;
   color: wheat;
 }
+
+/* VOTACAO */
+
