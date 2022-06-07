@@ -93,21 +93,7 @@
             </div>
             <div class="cor-alerta" id="card_1"></div>
         </div>
-        <div class="card">
-            <h1>Aquário 1</h1>
-            <div class="temperatura">
-                <p id="temp_aquario_2">-°C</p>  
-            </div>
-            <div class="cor-alerta" id="card_2"></div>
-
-        </div>
-        <div class="card">
-            <h1>Aquário 1</h1>
-            <div class="temperatura">
-                <p id="temp_aquario_3">-°C</p>
-            </div>
-            <div class="cor-alerta ideal" id="card_3"></div>
-        </div>
+        
     </div></div>
         
     
@@ -141,6 +127,7 @@
 
                         var dados = {
                             temperatura: resposta[0].temperatura,
+                            
                             // prato: resposta[1].prato
                         }
 
@@ -196,7 +183,7 @@
             // card = card_1
          
         // else if (idAquario == 2) {
-            temp_aquario_2.innerHTML = temperatura;
+            // temp_aquario_2.innerHTML = temperatura2;
         //     card = card_2
         // } else if (idAquario == 3) {
         //     temp_aquario_3.innerHTML = temperatura + "°C";
