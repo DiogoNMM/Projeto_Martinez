@@ -26,3 +26,8 @@ insert into pratos values
 
 select * from usuario;
 select * from pratos;     
+
+select * from usuario join pratos on fkPrato = idPrato;
+
+
+select pratos.nomePrato, count(usuario.fkPrato) as temperatura from pratos join usuario on idPrato = fkPrato group by pratos.nomePrato;
