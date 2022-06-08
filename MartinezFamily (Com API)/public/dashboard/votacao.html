@@ -105,7 +105,7 @@
       </div>
     </div>
 
-    <div class="home_conteudo">
+    <!-- <div class="home_conteudo">
       <div class="texto">
         <div class="card">
           <h1 id="prato1">Nome Prato</h1>
@@ -114,10 +114,13 @@
           </div>
           <div class="cor-alerta" id="card_1"></div>
         </div>
-      </div>
-
-      <div class="graph" style="width: 40%">
+      </div> -->
+    <div class="home_conteudo">
+      <div class="grafico">
+        <h2 style="margin-left: 43%; margin-top: 3%;">Pratos votados</h2>
+      <div class="graph" style="width: 50%; height: 60%; margin-left: 25%; margin-top: 5%;" >
         <canvas id="canvas_grafico"></canvas>
+      </div>
       </div>
     </div>
   </body>
@@ -174,9 +177,9 @@
       labels: [],
       datasets: [
         {
-          label: "Votos",
-          borderColor: "#32B9CD",
-          backgroundColor: "#32b9cd8f",
+          label: "Pratos Escolhidos",
+          borderColor: "#1b98e0",
+          backgroundColor: "#1b98e0",
           data: [],
         },
       ],
@@ -197,8 +200,8 @@
       }
     }
 
-    prato1.innerHTML = prato.nomePrato;
-    temp_aquario_1.innerHTML = prato.votos;
+    // prato1.innerHTML = prato.nomePrato;
+    // temp_aquario_1.innerHTML = prato.votos;
 
     var ctx = canvas_grafico.getContext("2d");
     window.grafico_linha = new Chart(ctx, {

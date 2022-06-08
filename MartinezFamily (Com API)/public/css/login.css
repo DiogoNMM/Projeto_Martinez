@@ -38,7 +38,7 @@ width: 35vw;
 
 .login-direita {
 width: 50vw;
-height: 100vh;
+height: 95vh;
 display: flex;
 justify-content: center;
 align-items: center;
@@ -61,7 +61,7 @@ border-left: 1px black solid;
 border-right: 1px black solid;
 }
 
-.top {
+.slogan {
 margin-top: 12%;
 }
 
@@ -140,3 +140,6 @@ font-weight: bold;
 
 }
 
+/* .textfield select{
+    box-shadow: 50px 50px 50px;
+} */

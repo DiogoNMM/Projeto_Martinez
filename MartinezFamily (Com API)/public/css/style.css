@@ -76,6 +76,16 @@ width: 200px;
 cursor: pointer;
 }
 
+.logocadastro{
+width: 100px;
+cursor: pointer;
+}
+
+.logologin{
+width: 100px;
+cursor: pointer;
+}
+
 .nav-bar ul li{
 list-style: none;
 display: inline-block;
@@ -549,7 +559,7 @@ animation: animateOnda_02 3s linear infinite;
 
 
 
-@keyframes animateOnda{
+/* @keyframes animateOnda{
     0%{
         background-position-x: 100px;
     }100%{
@@ -563,4 +573,4 @@ animation: animateOnda_02 3s linear infinite;
     }100%{
         background-position-x: 1000px;
     }
-}
+} */
