@@ -14,7 +14,7 @@
     <link href='https://fonts.googleapis.com/css?family=Poppins' rel='stylesheet'>
 </head>
 
-<body>
+<body onload="validarSessao(), obterdados()">
 <div class="sidebar">
     <div class="logo_conteudo">
         <div class="logo">
@@ -24,11 +24,7 @@
         <i class='bx bx-menu' id="btn" style="cursor: pointer;"></i>
     </div>  
     <ul class="nav_list">
-        <!-- <li>  
-            <i class='bx bx-search-alt-2' ></i>
-            <input type="text" placeholder="Procurar...">      
-            <span class="ferramenta">Procurar</span>
-        </li> -->
+        
         <li>
             <a href="usuario.html">
                 <i class='bx bxs-food-menu'></i>
@@ -46,31 +42,10 @@
         <li>
             <a href="votacao.html">
                 <i class='bx bx-poll'></i>
-                <span class="links_nome">Quiz</span>
+                <span class="links_nome">Votação</span>
             </a>
-            <span class="ferramenta">Quiz</span>
+            <span class="ferramenta">Votação</span>
         </li>
-        <!-- <li>
-            <a href="#">
-                <i class='bx bx-cart' ></i>
-                <span class="links_nome">Order</span>
-            </a>
-            <span class="ferramenta">Order</span>
-        </li> -->
-        <!-- <li>
-            <a href="#">
-                <i class='bx bxs-heart' ></i>
-                <span class="links_nome">Save</span>
-            </a>
-            <span class="ferramenta">Save</span>
-        </li> -->
-        <!-- <li>
-            <a href="#">
-                <i class='bx bx-cog' ></i>
-                <span class="links_nome">Settings</span>
-            </a>
-            <span class="ferramenta">Settings</span>
-        </li> -->
     </ul>
     <div class="perfil_conteudo">
         <div class="perfil">

@@ -1,201 +1,220 @@
+<!-- @format -->
+
 <!DOCTYPE html>
 <html lang="pt-br">
-<head>
-    <link rel="icon" href="../css/img/MartinezFamily__1_-removebg-preview.png">
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <link
+      rel="icon"
+      href="../css/img/MartinezFamily__1_-removebg-preview.png"
+    />
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Votação</title>
-    <link rel="stylesheet" href="usuario.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css" integrity="sha512-KfkfwYDsLkIlwQp6LFnl8zNdLGxu9YAA1QvwINks4PhcElQSvqcyVLLD9aMhXd13uQjoXtEKNosOWaZqXgel0g==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="usuario.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css"
+      integrity="sha512-KfkfwYDsLkIlwQp6LFnl8zNdLGxu9YAA1QvwINks4PhcElQSvqcyVLLD9aMhXd13uQjoXtEKNosOWaZqXgel0g=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
     <script src="../js/funcoes.js"></script>
-    <link href='https://unpkg.com/boxicons@2.1.2/css/boxicons.min.css' rel='stylesheet'>
-    <link href='https://fonts.googleapis.com/css?family=Poppins' rel='stylesheet'>
-</head>
-<body onload="validarSessao(), obterdados()">
+    <link
+      href="https://unpkg.com/boxicons@2.1.2/css/boxicons.min.css"
+      rel="stylesheet"
+    />
+    <link
+      href="https://fonts.googleapis.com/css?family=Poppins"
+      rel="stylesheet"
+    />
+    <script
+      type="text/javascript"
+      src="https://www.chartjs.org/dist/2.8.0/Chart.min.js"
+    ></script>
+  </head>
+  <body onload="validarSessao(), obterdados()">
     <div class="sidebar">
-        <div class="logo_conteudo">
-            <div class="logo">
-                <i class='bx bxl-meta'></i>
-                <div class="logo_nome">MartinezFamily</div>
-            </div>
-            <i class='bx bx-menu' id="btn" style="cursor: pointer;"></i>
-        </div>  
-        <ul class="nav_list">
-            <!-- <li>  
+      <div class="logo_conteudo">
+        <div class="logo">
+          <i class="bx bxl-meta"></i>
+          <div class="logo_nome">MartinezFamily</div>
+        </div>
+        <i class="bx bx-menu" id="btn" style="cursor: pointer"></i>
+      </div>
+      <ul class="nav_list">
+        <!-- <li>  
                 <i class='bx bx-search-alt-2' ></i>
                 <input type="text" placeholder="Procurar...">      
                 <span class="ferramenta">Procurar</span>
             </li> -->
-            <li>
-                <a href="usuario.html">
-                    <i class='bx bxs-food-menu'></i>
-                    <span class="links_nome">Receitas</span>
-                </a>
-                <span class="ferramenta">Receitas</span>
-            </li>
-            <li>
-                <a href="#">
-                    <i class='bx bxs-chat' ></i>
-                    <span class="links_nome">Forum de usuários</span>
-                </a>
-                <span class="ferramenta">Forum</span>
-            </li>
-            <li>
-                <a href="votacao.html">
-                    <i class='bx bx-poll'></i>
-                    <span class="links_nome">Votação</span>
-                </a>
-                <span class="ferramenta">Votação</span>
-            </li>
-            <!-- <li>
+        <li>
+          <a href="usuario.html">
+            <i class="bx bxs-food-menu"></i>
+            <span class="links_nome">Receitas</span>
+          </a>
+          <span class="ferramenta">Receitas</span>
+        </li>
+        <li>
+          <a href="#">
+            <i class="bx bxs-chat"></i>
+            <span class="links_nome">Forum de usuários</span>
+          </a>
+          <span class="ferramenta">Forum</span>
+        </li>
+        <li>
+          <a href="votacao.html">
+            <i class="bx bx-poll"></i>
+            <span class="links_nome">Votação</span>
+          </a>
+          <span class="ferramenta">Votação</span>
+        </li>
+        <!-- <li>
                 <a href="#">
                     <i class='bx bx-cart' ></i>
                     <span class="links_nome">Order</span>
                 </a>
                 <span class="ferramenta">Order</span>
             </li> -->
-            <!-- <li>
+        <!-- <li>
                 <a href="#">
                     <i class='bx bxs-heart' ></i>
                     <span class="links_nome">Save</span>
                 </a>
                 <span class="ferramenta">Save</span>
             </li> -->
-            <!-- <li>
+        <!-- <li>
                 <a href="#">
                     <i class='bx bx-cog' ></i>
                     <span class="links_nome">Settings</span>
                 </a>
                 <span class="ferramenta">Settings</span>
             </li> -->
-        </ul>
-        <div class="perfil_conteudo">
-            <div class="perfil">
-                <div class="perfil_detalhes">
-                    <img src="img/99742929.jpg" alt="">
-                    <div class="profissao">
-                        <div class="nome" id="b_usuario">Diogo Martinez</div>
-                        <div class="job">Analista Senior</div>
-                    </div>
-                </div>
-                <i class='bx bx-log-out' id="log_out" onclick="limparSessao()"></i>
+      </ul>
+      <div class="perfil_conteudo">
+        <div class="perfil">
+          <div class="perfil_detalhes">
+            <img src="img/99742929.jpg" alt="" />
+            <div class="profissao">
+              <div class="nome" id="b_usuario">Diogo Martinez</div>
+              <div class="job">Analista Senior</div>
             </div>
+          </div>
+          <i class="bx bx-log-out" id="log_out" onclick="limparSessao()"></i>
         </div>
+      </div>
     </div>
 
-
     <div class="home_conteudo">
-        <div class="texto"><div class="card">
-            <h1 id="prato1">Nome Prato</h1>
-            <div class="temperatura">
-                <p id="temp_aquario_1">-°C</p>
-            </div>
-            <div class="cor-alerta" id="card_1"></div>
+      <div class="texto">
+        <div class="card">
+          <h1 id="prato1">Nome Prato</h1>
+          <div class="temperatura">
+            <p id="temp_aquario_1">-°C</p>
+          </div>
+          <div class="cor-alerta" id="card_1"></div>
         </div>
-        
-    </div></div>
-        
-    
-</body>
+      </div>
+
+      <div class="graph" style="width: 40%">
+        <canvas id="canvas_grafico"></canvas>
+      </div>
+    </div>
+  </body>
 </html>
 <script>
-    let btn = document.querySelector("#btn");
-    let sidebar = document.querySelector(".sidebar");
-    
-    
-    btn.onclick = function(){
-        sidebar.classList.toggle("active");
-    }
-    // searchBtn.onclick = function(){
-    //     sidebar.classList.toggle("active");
-    // }
-    
-    
-    b_usuario.innerHTML = sessionStorage.NOME_USUARIO;
-    </script>
+  let btn = document.querySelector("#btn");
+  let sidebar = document.querySelector(".sidebar");
 
-    <script>
-        function obterdados(idAquario) {
-        fetch(`/medidas/tempo-real/${idAquario}`)
-            .then(resposta => {
+  btn.onclick = function () {
+    sidebar.classList.toggle("active");
+  };
+  // searchBtn.onclick = function(){
+  //     sidebar.classList.toggle("active");
+  // }
 
-                if (resposta.ok) {
-                    resposta.json().then(resposta => {
+  b_usuario.innerHTML = sessionStorage.NOME_USUARIO;
+</script>
 
-                        console.log(`Dados recebidos: ${JSON.stringify(resposta)}`);
+<script>
+  window.onload = obterDadosGrafico(1);
 
-                        var dados = {
-                            temperatura: resposta[0].temperatura,
-                            
-                            // prato: resposta[1].prato
-                        }
+  // O gráfico é construído com três funções:
+  // 1. obterDadosGrafico -> Traz dados do Banco de Dados para montar o gráfico da primeira vez
+  // 2. plotarGrafico -> Monta o gráfico com os dados trazidos e exibe em tela
+  // 3. atualizarGrafico -> Atualiza o gráfico, trazendo novamente dados do Banco
 
-                        alertar(resposta[0].temperatura, idAquario);
-                    });
-                } else {
+  // Esta função *obterDadosGrafico* busca os últimos dados inseridos em tabela de medidas.
+  // para, quando carregar o gráfico da primeira vez, já trazer com vários dados.
+  // A função *obterDadosGrafico* também invoca a função *plotarGrafico*
 
-                    console.error('Nenhum dado encontrado ou erro na API');
-                }
-            })
-            .catch(function (error) {
-                console.error(`Erro na obtenção dos dados do aquario p/ gráfico: ${error.message}`);
-            });
+  //     Se quiser alterar a busca, ajuste as regras de negócio em src/controllers
+  //     Para ajustar o "select", ajuste o comando sql em src/models
+  function obterDadosGrafico(idAquario) {
+    fetch(`/medidas/ultimas/${idAquario}`, { cache: "no-store" })
+      .then(function (response) {
+        if (response.status == 200) {
+          response.json().then(function (resposta) {
+            console.log(`Dados recebidos: ${JSON.stringify(resposta)}`);
+            plotarGrafico(resposta, idAquario);
+          });
+        } else {
+          console.error("Nenhum dado encontrado ou erro na API");
+        }
+      })
+      .catch(function (error) {
+        console.error(
+          `Erro na obtenção dos dados p/ gráfico: ${error.message}`
+        );
+      });
+  }
 
-    }
+  function plotarGrafico(resposta, idAquario) {
+    var dados = {
+      labels: [],
+      datasets: [
+        {
+          label: "Votos",
+          borderColor: "#32B9CD",
+          backgroundColor: "#32b9cd8f",
+          data: [],
+        },
+      ],
+    };
 
-    function alertar(temperatura, idAquario) {
-        var limites = {
-            muito_quente: 23,
-            quente: 22,
-            ideal: 20,
-            frio: 10,
-            muito_frio: 5
-        };
+    var prato = {
+      nomePrato: "",
+      votos: "",
+    };
 
-        var classe_temperatura = 'cor-alerta';
-
-        // if (temperatura >= limites.muito_quente) {
-        //     classe_temperatura = 'cor-alerta perigo-quente';
-        //     console.log("caiu no 1")
-        // }
-        // else if (temperatura < limites.muito_quente && temperatura >= limites.quente) {
-        //     classe_temperatura = 'cor-alerta alerta-quente';
-        //     console.log("caiu no 2")
-        // }
-        // else if (temperatura < limites.quente && temperatura > limites.frio) {
-        //     classe_temperatura = 'cor-alerta ideal';
-        //     console.log("caiu no 3")
-        // }
-        // else if (temperatura <= limites.frio && temperatura > limites.muito_frio) {
-        //     classe_temperatura = 'cor-alerta alerta-frio';
-        //     console.log("caiu no 4")
-        // }
-        // else if (temperatura < limites.min_temperatura) {
-        //     classe_temperatura = 'cor-alerta perigo-frio';
-        //     console.log("caiu no 5")
-        // }
-
-        var card;
-
-            // prato1.innerHTML = prato;
-            temp_aquario_1.innerHTML = temperatura;
-            // card = card_1
-         
-        // else if (idAquario == 2) {
-            // temp_aquario_2.innerHTML = temperatura2;
-        //     card = card_2
-        // } else if (idAquario == 3) {
-        //     temp_aquario_3.innerHTML = temperatura + "°C";
-        //     card = card_3
-        // } else if (idAquario == 4) {
-        //     temp_aquario_4.innerHTML = temperatura + "°C";
-        //     card = card_4
-        // }
-
-       
-
+    for (i = 0; i < resposta.length; i++) {
+      var registro = resposta[i];
+      dados.labels.push(registro.nomePrato);
+      dados.datasets[0].data.push(registro.temperatura);
+      if (registro.temperatura > prato.votos) {
+        prato.nomePrato = registro.nomePrato;
+        prato.votos = registro.temperatura;
+      }
     }
 
-    </script>
-    
+    prato1.innerHTML = prato.nomePrato;
+    temp_aquario_1.innerHTML = prato.votos;
+
+    var ctx = canvas_grafico.getContext("2d");
+    window.grafico_linha = new Chart(ctx, {
+      type: "bar",
+      data: dados,
+      options: {
+        scales: {
+          yAxes: [
+            {
+              ticks: {
+                beginAtZero: true,
+              },
+            },
+          ],
+        },
+      },
+    });
+  }
+</script>
