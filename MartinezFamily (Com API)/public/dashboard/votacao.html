@@ -117,10 +117,43 @@
       </div> -->
     <div class="home_conteudo">
       <div class="grafico">
-        <h2 style="margin-left: 43%; margin-top: 3%;">Pratos votados</h2>
-      <div class="graph" style="width: 50%; height: 60%; margin-left: 25%; margin-top: 5%;" >
-        <canvas id="canvas_grafico"></canvas>
-      </div>
+        <h2 style="margin-left: 43%; margin-top: 3%; display: block;" id="titulo">Pratos Favoritos</h2>
+        <h2 style="margin-left: 43%; margin-top: 3%; display: none;" id="titulodois" >Votação Do Novo Cardápio</h2>
+        <div class="graph" id="dash" style="width: 50%; height: 60%; margin-left: 25%; margin-top: 5%; display: block;" >
+          <canvas id="canvas_grafico"></canvas>
+          <button onclick="vota()">Vamos para a votação</button>
+        </div>
+        <div class="escolha" style="display: none;" id="votacao">
+          <div class="fotovotacao">
+
+            <label for="ipt_stro">
+              <div class="strogonoff">
+                <input type="checkbox" id="ipt_stro">
+              </div>
+              Strogonoff de carne
+            </label>
+
+            <label for="ipt_nhoque">
+              <div class="nhoque">
+                <input type="checkbox" id="ipt_nhoque">
+              </div>
+              Nhoque
+            </label>
+
+            <label for="ipt_parme">
+              <div class="parmegiana">
+                <input type="checkbox" id="ipt_parme">
+              </div>
+              Filé De Frango à Parmegiana
+            </label>
+            
+          </div><br>
+          <button onclick="registro()">Votar</button>
+          <div id="mostrar"></div> <br> <br>
+          <div id="mostrarfinal"></div> <br><br>
+          <div id="mostrarprato"></div>
+          <!-- <button class="botaovoto" onclick="voltar()">Voltar para o gráfico</button> <br><br> -->
+        </div>
       </div>
     </div>
   </body>
@@ -137,6 +170,96 @@
   // }
 
   b_usuario.innerHTML = sessionStorage.NOME_USUARIO;
+</script>
+
+<script>
+function vota(){
+    dash.style.display = "none";
+    titulo.style.display = "none";
+    votacao.style.display = "block";
+    titulodois.style.display = "block";
+}
+
+function voltar(){
+    dash.style.display = "block";
+    titulo.style.display = "block";
+    votacao.style.display = "none";
+    titulodois.style.display = "none";
+}
+
+  var strogonoff =[]
+  var nhoque = []
+  var parmegiana = []
+  var votos = []
+  var maior = 0 
+  var maiorNome = ''
+
+function registro(){
+
+if (ipt_nhoque.checked == false && ipt_parme.checked == false && ipt_stro.checked == false) {
+  alert('Escolha um prato')
+}else{
+  if (ipt_nhoque.checked === true) {
+    nhoque.push(1)
+    ipt_nhoque.checked = ""
+    votos.push("Nhoque")
+  }
+  if (ipt_stro.checked === true) {
+    strogonoff.push(1)
+    ipt_stro.checked = ""
+    votos.push("Strogonoff")
+  }
+  if (ipt_parme.checked === true) {
+    parmegiana.push(1)
+    ipt_parme.checked = ""
+    votos.push("Parmegiana")
+  }
+
+  mostrar.innerHTML = `Quantidade de votos ${votos.length} <br> Votos para parmegiana: ${parmegiana.length}<br>
+  Votos para nhoque: ${nhoque.length} <br> Votos para strogonoff: ${strogonoff.length}`
+
+  mostrarfinal.innerHTML = '';
+  mostrarprato.innerHTML = '';
+
+  for (var index = 1; index < votos.length; index++) {
+    if (nhoque.length > maior) {
+      maior = nhoque.length
+      maiorNome = "Nhoque"
+    }else{
+      if (strogonoff.length > maior) {
+        maior = strogonoff.length
+        maiorNome = "Strogonoff"
+      }else{
+        if (parmegiana.length > maior) {
+          maior = parmegiana.length
+          maiorNome = "Parmegiana"
+        }
+      }
+    }
+    
+    if (index == 6) {
+      alert("Limite de votos atingido")
+      break
+    }
+    mostrarfinal.innerHTML +=`o ${index}º voto foi no ${votos[index - 1]} <br> ` 
+
+    mostrarprato.innerHTML = `O prato mais votodo foi: <b> ${maiorNome } </b>`
+    
+
+  }
+
+}    
+
+
+
+
+
+
+
+
+
+
+}
 </script>
 
 <script>

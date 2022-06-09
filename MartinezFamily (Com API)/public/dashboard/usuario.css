@@ -390,3 +390,46 @@ width: 100%;
   margin-right: 50%;
 } */
 
+.escolha{
+  margin-left: 25%; 
+  margin-top: 5%; 
+}
+
+.fotovotacao{
+ display: flex;
+flex-direction: row;
+justify-content: space-around;
+margin-right: 20%;
+}
+
+
+.strogonoff{
+  background-image: url(img/strogonoff.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  height: 25vh;
+  width: 15vw;
+}
+.parmegiana{
+  background-image: url(img/parmegiana.webp);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  height: 25vh;
+  width: 15vw;
+}
+.nhoque{
+  background-image: url(img/nhoque.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  height: 25vh;
+  width: 15vw;
+}
+
+.botaovoto{
+  display: flex;
+  justify-content: center;
+  margin-top: 20%;
+}
