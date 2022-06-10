@@ -529,7 +529,7 @@ background: url(img/wave.png);
 background-size: 1000px 100px;
 }
 
-footer .onda#onda1{
+/* footer .onda#onda1{
 z-index: 1000;
 opacity: 1;
 bottom: 0;
@@ -555,7 +555,7 @@ z-index: 999;
 opacity: 0.7;
 bottom: 20px;
 animation: animateOnda_02 3s linear infinite;
-}
+} */
 
 
 

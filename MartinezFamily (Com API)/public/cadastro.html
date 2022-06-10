@@ -87,7 +87,7 @@
               </div>
 
               <div class="textfield" style="align-items: center;">
-                <label for="">Escolha seu prato</label>
+                <label for="">Escolha seu prato favorito</label>
                 <select name="" id="prato">
                   <option value="1">Feijoada</option>
                   <option value="2">Baião de Dois</option>
@@ -119,7 +119,7 @@
 <script>
     function cadastrar() {
         aguardar();
-
+        mensagem_erro.innerHTML = ''
         //Recupere o valor da nova input pelo nome do id
         // Agora vá para o método fetch logo abaixo
         var nomeVar = iptNome.value;
@@ -138,6 +138,24 @@
         }
         else {
             setInterval(sumirMensagem, 5000)
+        }
+
+        if (emailVar.indexOf("@") == -1 || emailVar.indexOf(".com") == -1) {
+          cardErro.style.display = "block";
+          mensagem_erro.innerHTML = 'Ops, e-mail inválido! Verifique e tente novamente.';
+          finalizarAguardar();
+          return false;
+        } else {
+          setInterval(sumirMensagem, 5000);
+        }
+
+        if (senhaVar != confirmacaoSenhaVar) {
+          cardErro.style.display = "block";
+          mensagem_erro.innerHTML = 'As senhas inseridas devem ser iguais para prosseguir!';
+          finalizarAguardar();
+          return false;
+        } else {
+          setInterval(sumirMensagem, 5000);
         }
 
         // Enviando o valor da nova input

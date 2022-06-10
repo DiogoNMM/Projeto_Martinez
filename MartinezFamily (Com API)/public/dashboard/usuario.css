@@ -410,6 +410,7 @@ margin-right: 20%;
   background-position: center;
   height: 25vh;
   width: 15vw;
+  border-radius: 10px;
 }
 .parmegiana{
   background-image: url(img/parmegiana.webp);
@@ -418,6 +419,7 @@ margin-right: 20%;
   background-position: center;
   height: 25vh;
   width: 15vw;
+  border-radius: 10px;
 }
 .nhoque{
   background-image: url(img/nhoque.jpg);
@@ -426,10 +428,26 @@ margin-right: 20%;
   background-position: center;
   height: 25vh;
   width: 15vw;
+  border-radius: 10px;
 }
 
-.botaovoto{
-  display: flex;
-  justify-content: center;
-  margin-top: 20%;
+.home_conteudo button{
+  width: 200px;
+  padding: 15px 0;
+  text-align: center;
+  margin: 20px 10px;
+  border-radius:  25px;
+  font-weight: bold;
+  border: 2px solid #1b98e082;
+  background: #1b98e082;
+  color: #fff;
+  cursor: pointer;
+  transition: .4s;
+  /* margin-top: 10%; */
 }
+
+.home_conteudo button:hover{
+  background: #1b98e0;
+  border: 2px solid #1b98e0;
+  cursor: pointer;
+  }
